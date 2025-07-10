@@ -1,0 +1,230 @@
+/*Começando no bosy colocando algumas configurações iniciais*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #f7f7f7;
+    display: grid;
+    gap: 60px;
+    justify-items: center;
+    margin-top: 60px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-top-right-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.menu {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.menu a {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border: 1px solid #ccc;
+    border-bottom: 4px solid #e21;
+    border-radius: 4px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    transition: 1s;
+    background-color: #e21;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+
+}
+
+.introducao {
+    background-color: #fff;
+    padding: 40px;
+    text-align: right;
+    position: relative;
+    display: grid;
+    align-content: center;
+    gap: 20px;
+    justify-items: end;
+    border-top:4px solid #ccc ;
+    border-left: 4px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+.botao {
+    background-color: #e21;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+
+.botao:hover {
+       transition: 1s;
+    background-color: #ccc;
+    color: black;
+}
+
+.detalhe {
+    display: inline-block;
+    background-color: #e21;
+   width: 60px;
+   height: 4px;
+   position: absolute;
+   top: 30px;
+   right: -30px;
+}
+
+.subtitulo {
+    font-size: 64px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0, 0.2);
+    padding: 40px;
+    align-self: center;
+    border-left: 4px solid #e21;
+
+}
+
+.vantagens {
+    background-color: #fff;
+    padding: 40px;
+    border-right: 4px solid #ccc;
+}
+
+.vantagens-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+}
+
+.vantagens-item p {
+    grid-column: 2;
+}
+
+.rodape {
+    background-color: #ccc;
+    width: 1000px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-bottom: 4px solid #e21;
+    border-left: 4px solid #e21;
+    border-right: 4px solid #e21;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+
+}
+
+
+/* Telas até 900px (tablets e celulares em paisagem) */
+@media (max-width: 900px) {
+  .conteudo {
+    grid-template-columns: 1fr; /* Deixa tudo em uma coluna */
+  }
+
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .subtitulo {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px;
+    border-left: none;
+    border-top: 4px solid #e21;
+  }
+
+  .vantagens {
+    border-right: none;
+    border-left: 4px solid #ccc;
+  }
+
+  .rodape {
+    width: 100%;
+  }
+}
+
+/* Telas até 600px (celulares em modo retrato) */
+@media (max-width: 600px) {
+  body {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .introducao {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .botao {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .detalhe {
+    display: none; /* Esconde a barra lateral decorativa */
+  }
+
+  .subtitulo {
+    font-size: 32px;
+    padding: 10px;
+  }
+
+  .vantagens {
+    padding: 20px;
+  }
+
+  .vantagens-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .vantagens-item img {
+    margin: 0 auto;
+  }
+
+  .vantagens-item p {
+    grid-column: 1;
+  }
+
+  .rodape {
+    padding: 20px;
+    font-size: 14px;
+  }
+}
